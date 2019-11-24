@@ -1,1 +1,36 @@
+#header {
+    background-color: #3C3C3C;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    padding: 10px;
+}
 
+.search {
+    background-color: dodgerblue;
+    border: 2px solid lightblue;
+    border-radius: 5px;
+    padding: 10px;
+    color: white;
+}
+
+.cities {
+    width: 100%;
+    padding: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#currentWeather {
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    width: 100%;
+    padding: 20px 15px 20px 15px;
+}
+
+.forecast {
+    border: 1px solid blue;
+    background-color: dodgerblue;
+    color: white;
+    border-radius: 5px;
+    padding: 12px 8px 12px 8px;
+}
