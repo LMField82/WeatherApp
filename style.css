@@ -30,7 +30,11 @@
 .forecast {
     border: 1px solid blue;
     background-color: dodgerblue;
-    color: white;
+    color:#3C3C3C
     border-radius: 5px;
     padding: 12px 8px 12px 8px;
+}
+#forecastBox {
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
 }
