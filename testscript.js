@@ -16,8 +16,8 @@ console.log("here is something");
 
     });
 
-    function makeRow(searchValue) {
-   var listItem = $(".prevSearch").prepend($("<li>").addClass("list-group-item list-group-item-action").text(searchValue));
+    function makeRow(searchValue) { 
+   $(".prevSearch").prepend($("<li>").addClass("list-group-item list-group-item-action").text(searchValue));
         
     }     
 
@@ -67,11 +67,11 @@ console.log("here is something");
                         cardBody.append(title, tempData, windData, humidityData);
                         card.append(cardBody);
                         $("#currentWeather").append(card);
-                        //addButton();
+                        
                         getUVIndex(data.coord.lat, data.coord.lon);
                         getForecast(searchValue);
                         makeRow(searchValue);
-                        //make new button for each city previously searched
+                        
                     }   
                 
             });
