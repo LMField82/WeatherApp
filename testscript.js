@@ -17,8 +17,8 @@ console.log("here is something");
     });
 
     function makeRow(searchValue) {
-   $(".prevSearch").append($("<li>").addClass("list-group-item list-group-item-action").text(searchValue));
-
+   var listItem = $(".prevSearch").prepend($("<li>").addClass("list-group-item list-group-item-action").text(searchValue));
+        
     }     
 
 //city weather current and future       
@@ -40,6 +40,20 @@ console.log("here is something");
                     //       makeRow();
                     //       addButton();
                     //     }
+                    // $("#searchBtn").on("click", "li", function(data) {
+                    //     searchWeather($(this).text());
+                    //     function addButton() {
+                
+                    //     $("<li>").addClass("prevSearch").prepend(searchValue);
+                    //     console.log("is this working?")
+                    //     $("#currentWeather").empty();
+                    //     } 
+                
+                        
+                        
+                        
+                    // });
+                    
                         console.log(queryURL);
 
                         var title = $("<h1>").addClass("city").text(data.name +"   "+ new Date().toLocaleDateString());
@@ -53,28 +67,16 @@ console.log("here is something");
                         cardBody.append(title, tempData, windData, humidityData);
                         card.append(cardBody);
                         $("#currentWeather").append(card);
-                        // addButton();
+                        //addButton();
                         getUVIndex(data.coord.lat, data.coord.lon);
                         getForecast(searchValue);
+                        makeRow(searchValue);
+                        //make new button for each city previously searched
                     }   
                 
             });
     
 
-//make new button for each city previously searched
-    $("#searchBtn").on("click", "li", function(data) {
-        searchWeather($(this).text());
-        function addButton() {
-
-        $("<li>").addClass("prevSearch").prepend(searchValue);
-        console.log("is this working?")
-        $("#currentWeather").empty();
-        } 
-
-        
-        
-
-    });
 
     };
         
